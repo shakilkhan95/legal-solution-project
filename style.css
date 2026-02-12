@@ -29,7 +29,7 @@ html{
 
 /* shared styles  */
 .container{
-    padding: 120px 7%;
+    padding: 60px 7%;
     margin: 0 auto;
 }
 
@@ -50,8 +50,18 @@ html{
     background-color: var(--bg-dark-07);
 }
 
+.section-header{
+    text-align: center;
+}
+
+.section-title{
+    font-family: "EB Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark-02);
+}
+
 .section-details{
-    font-size: clamp(0.7rem, 1vw + .1rem, 1rem);
     color: var(--text-dark-03);
     margin: 24px 0;
 }
@@ -113,11 +123,6 @@ html{
     color: var(--bg-btn);
 }
 
-.banner-details{
-    color: var(--text-dark-06);
-    margin: 24px 0;
-}
-
 .search-box{
     display: flex;
     justify-content: center;
@@ -135,6 +140,45 @@ input[type="text"]{
 
 input[type="text"]::placeholder{
     color: var(--text-dark-03);
+}
+
+/* Legal Practice area section styles  */
+.services-card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.services-card{
+    padding: 40px;
+    text-align: center;
+    border: 1px solid var(--text-dark-06);
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 0 var(--text-dark-06);
+}
+
+.card-title{
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark-02);
+}
+
+.service-card-icon{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: var(--bg-btn);
+    border-radius: 50%;
+}
+
+.card-img{
+    margin-bottom: 20px;
 }
 
 /* responsive styles for medium/tablet devices */
@@ -166,12 +210,27 @@ input[type="text"]::placeholder{
         border-radius: 8px;
         background-size: cover;
     }
+
+    .services-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Responsive styles for small/mobile devices */
 @media screen and (max-width: 576px){
+    .section-title{
+        font-size: 1.5rem;
+    }
     .banner-content{
         padding: 20px;
+    }
+
+    .services-card-container{
+        grid-template-columns: 1fr;
+        margin: 0 70px;
+    }
+    .card-title{
+        font-size: 1.25rem;
     }
 }
 
@@ -193,5 +252,9 @@ input[type="text"]::placeholder{
     }
     #search{
         padding: 12px;
+    }
+
+    .services-card-container{
+        margin: 0 10px;
     }
 }
