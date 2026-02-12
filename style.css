@@ -181,6 +181,47 @@ input[type="text"]::placeholder{
     margin-bottom: 20px;
 }
 
+/* Client review section styles  */
+.slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    background-image: url(/images/slider-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.slide-icon{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.client{
+    padding: 0 50px;
+    text-align: center;
+}
+
+.client-name{
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: "EB Garamond", serif;
+    color: #FFFFFF;
+}
+
+.client-position{
+    color: #FFFFFF;
+}
+
+.client .section-details{
+    color: var(--text-dark-06);
+}
+
 /* responsive styles for medium/tablet devices */
 @media screen and (max-width: 992px){
     .container{
@@ -213,6 +254,11 @@ input[type="text"]::placeholder{
 
     .services-card-container{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider{
+        gap: 20px;
+        padding: 20px;
     }
 }
 
@@ -256,5 +302,13 @@ input[type="text"]::placeholder{
 
     .services-card-container{
         margin: 0 10px;
+    }
+
+    .slider{
+        gap: 10px;
+        padding: 20px 10px;
+    }
+    .client{
+        padding: 0;
     }
 }
