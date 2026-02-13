@@ -196,7 +196,7 @@ input[type="text"]::placeholder{
     align-items: center;
     gap: 50px;
     padding: 50px;
-    background-image: url(./images/slider-2.jpg);
+    background-image: url("images/slider-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
