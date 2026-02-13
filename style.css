@@ -97,7 +97,7 @@ html{
     gap: 20px;
 }
 
-.nav-container .nav-items .nav-links{
+.nav-items .nav-links{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -318,6 +318,37 @@ input[type="text"]::placeholder{
     width: 100%;
 }
 
+/* Footer section styles  */
+footer{
+    background-color: #111111;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .container .card-title{
+    color: #FFFFFF;
+}
+
+.links ul .nav-items .nav-links{
+    margin-top: 20px;
+}
+
+.subscribe-input{
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-input input{
+    padding: 26px;
+}
+
+.subscribe-input img{
+    margin-left: -20px;
+}
+
 /* responsive styles for medium/tablet devices */
 @media screen and (max-width: 992px){
     .container{
@@ -369,8 +400,8 @@ input[type="text"]::placeholder{
         order: 1;
     }
 
-    .contact-card-container{
-        grid-template-columns: 1fr;
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -431,5 +462,13 @@ input[type="text"]::placeholder{
 
     .faq-img img{
         width: 100%;
+    }
+
+    .contact-card-container{
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        grid-template-columns: 1fr;
     }
 }
