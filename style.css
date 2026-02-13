@@ -337,16 +337,30 @@ footer .container .card-title{
 }
 
 .subscribe-input{
+    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-radius: 8px;
 }
 
 .subscribe-input input{
-    padding: 26px;
+    height: 100%;
+    width: 100%;
+    padding: 0 16px;
 }
 
-.subscribe-input img{
-    margin-left: -20px;
+.subscribe-input .email-icon{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 18px;
+    background: var(--bg-btn);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 /* responsive styles for medium/tablet devices */
