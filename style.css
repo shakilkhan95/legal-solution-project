@@ -38,6 +38,7 @@ html{
     font-size: 1.125rem;
     font-weight: 500;
     border-radius: 8px;
+    color: #FFFFFF;
     background-color: var(--bg-btn);
     outline: none;
     border: 1px solid var(--bg-btn);
@@ -64,6 +65,13 @@ html{
 .section-details{
     color: var(--text-dark-03);
     margin: 24px 0;
+}
+
+.section-content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 /* nav bar section styles  */
@@ -223,13 +231,6 @@ input[type="text"]::placeholder{
 }
 
 /* faq section styles  */
-.faq-content{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
 .faq-card-container{
     width: 100%;
     margin: auto 0;
@@ -242,9 +243,11 @@ input[type="text"]::placeholder{
     border-radius: 8px;
 }
 
-.faq-card-title{
+.card-title{
+    font-family: "EB Garamond", serif;
     font-size: 1.25rem;
     font-weight: 600;
+    margin-top: 20px;
     color: var(--text-dark-02);
 }
 
@@ -267,6 +270,52 @@ input[type="text"]::placeholder{
 .faq-card .fa-minus{
     display: none;
     cursor: pointer;
+}
+
+/* contact section styles  */
+.contact-card-container{
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.contact-card{
+    text-align: center;
+    padding: 50px;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+}
+
+.contact-form{
+    flex-basis: 50%;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    color: var(--text-dark-03);
+    background-color: #F3F3F3;
+    border-radius: 8px;
+}
+
+.contact-form textarea{
+    resize: none;
+    width: 100%;
+    background-color: #F3F3F3;
+    color: var(--text-dark-03);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.contact-form .btn-primary{
+    width: 100%;
 }
 
 /* responsive styles for medium/tablet devices */
@@ -308,7 +357,7 @@ input[type="text"]::placeholder{
         padding: 20px;
     }
 
-    .faq-content{
+    .section-content{
         flex-direction: column;
         align-items: center;
     }
@@ -318,6 +367,10 @@ input[type="text"]::placeholder{
 
     .faq-img{
         order: 1;
+    }
+
+    .contact-card-container{
+        grid-template-columns: 1fr;
     }
 }
 
