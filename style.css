@@ -222,6 +222,53 @@ input[type="text"]::placeholder{
     color: var(--text-dark-06);
 }
 
+/* faq section styles  */
+.faq-content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.faq-card-container{
+    width: 100%;
+    margin: auto 0;
+}
+
+.faq-card{
+    background-color: #F3F3F3;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.faq-card-title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark-02);
+}
+
+.faq-card-details{
+    display: none;
+    color: var(--text-dark-03);
+    margin-top: 20px;
+}
+
+.faq-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-card .fa-plus{
+    cursor: pointer;
+}
+
+.faq-card .fa-minus{
+    display: none;
+    cursor: pointer;
+}
+
 /* responsive styles for medium/tablet devices */
 @media screen and (max-width: 992px){
     .container{
@@ -260,6 +307,18 @@ input[type="text"]::placeholder{
         gap: 20px;
         padding: 20px;
     }
+
+    .faq-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-card-container{
+        order: 2;
+    }
+
+    .faq-img{
+        order: 1;
+    }
 }
 
 /* Responsive styles for small/mobile devices */
@@ -277,6 +336,11 @@ input[type="text"]::placeholder{
     }
     .card-title{
         font-size: 1.25rem;
+    }
+
+    .faq-card-title{
+        font-size: 1.15rem;
+        font-weight: 500;
     }
 }
 
@@ -310,5 +374,9 @@ input[type="text"]::placeholder{
     }
     .client{
         padding: 0;
+    }
+
+    .faq-img img{
+        width: 100%;
     }
 }
