@@ -8,11 +8,11 @@ function menuToggle(){
     navBar.classList.toggle('hidden');
 }
 //Toggling menu by clicking hamburger icon 
-menuBar.addEventListener('click', menuToggle);
+menuBar.onclick = menuToggle;
 //toggling by every nav link
-navLinks.forEach(link => {
-    link.onclick = menuToggle;
-});
+for(const navLink of navLinks){
+    navLink.onclick = menuToggle;
+}
 
 
 //variables for faq section card details toggler
